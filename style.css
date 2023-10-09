@@ -1,15 +1,8 @@
 body {
-  background-color: rgb(26, 92, 179);
-}
-
-.loader-spinner p {
-  background-color: rgb(97, 97, 133);
-}
-
-.card-container .card img {
-  max-width: 250px;
-  height: 100px;
-  background-color: aquamarine;
+  max-width: 1500px;
+  font-family: "roboto", Arial, sans-serif;
+  font-size: 0.9rem;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
