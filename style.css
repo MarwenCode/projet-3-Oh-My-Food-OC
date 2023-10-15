@@ -1,8 +1,66 @@
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   max-width: 1500px;
   font-family: "roboto", Arial, sans-serif;
   font-size: 0.9rem;
   margin: auto;
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1500px;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-size: 2rem;
+  background: #9356DC;
+  animation: loader 4s ease-in-out both;
+}
+.loader .fa-spinner {
+  animation: loader-spinner 1s ease-in-out 4 both;
+}
+
+.content {
+  background-color: white;
+  animation: content-animation 2s ease-in-out 2s both;
+  /* section 1 */
+  /* Section 1 */
+  /* Section 1 */
+}
+.content header .logo {
+  text-align: center;
+}
+.content header .logo img {
+  max-height: 70px;
+  max-width: 80%;
+  margin-top: 20px;
+}
+.content .container-localisation {
+  width: 100%;
+  height: 50px;
+  background: var(--Grey-2, #EAEAEA);
+}
+.content .container-localisation .localisation {
+  display: flex;
+  align-items: center; /* Vertically center the contents */
+  transform: translate(0%, 80%);
+}
+.content .container-localisation .localisation .fas {
+  flex: 0; /* Adjust this value as needed */
+  margin-left: 30%; /* Add some margin for spacing */
+}
+.content .container-localisation .localisation h4 {
+  flex: 1; /* Adjust this value as needed */
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
