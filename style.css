@@ -33,34 +33,97 @@ body {
   background-color: white;
   animation: content-animation 2s ease-in-out 2s both;
   /* section 1 */
-  /* Section 1 */
-  /* Section 1 */
+  /* SECTION 2 */
+}
+.content header {
+  background-color: white;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .content header {
+    left: 5%;
+  }
 }
 .content header .logo {
   text-align: center;
+  padding: 1rem 0rem 0.5rem 0rem;
 }
 .content header .logo img {
-  max-height: 70px;
-  max-width: 80%;
-  margin-top: 20px;
+  max-width: 60%;
+  justify-content: center;
 }
 .content .container-localisation {
   width: 100%;
-  height: 50px;
-  background: var(--Grey-2, #EAEAEA);
+  background: #EAEAEA;
 }
 .content .container-localisation .localisation {
+  justify-content: center;
   display: flex;
-  align-items: center; /* Vertically center the contents */
-  transform: translate(0%, 80%);
+  justify-content: center;
+  align-items: center;
 }
 .content .container-localisation .localisation .fas {
-  flex: 0; /* Adjust this value as needed */
-  margin-left: 30%; /* Add some margin for spacing */
+  flex: 0;
+  margin-left: 30%;
 }
 .content .container-localisation .localisation h4 {
-  flex: 1; /* Adjust this value as needed */
-  margin-left: 20px;
+  flex: 1;
+  padding: 1rem;
+}
+.content .explorer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin-bottom: 3.1rem;
+}
+.content .explorer .contenu {
+  margin: 2.8rem 2rem 3.75rem 2rem;
+}
+.content .explorer .contenu h3 {
+  margin-bottom: 1rem;
+}
+.content .explorer .contenu p {
+  margin-bottom: 1rem;
+}
+.content .explorer .contenu .explorer-btn {
+  width: 100%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+.content .explorer .contenu .explorer-btn button {
+  height: 3rem;
+  width: 13.4rem;
+  margin: auto;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 1.5rem;
+  transition: all 400ms ease-in-out;
+  border: none;
+  color: white;
+}
+.content .explorer .contenu .explorer-btn button a {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  height: 100%;
+  width: 100%;
+}
+.content .explorer .contenu .explorer-btn button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.content .explorer .contenu .explorer-btn button:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
