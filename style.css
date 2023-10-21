@@ -34,6 +34,8 @@ body {
   animation: content-animation 2s ease-in-out 2s both;
   /* section 1 */
   /* SECTION 2 */
+  /* SECTION 3 */
+  /* SECTION 4 */
 }
 .content header {
   background-color: white;
@@ -124,6 +126,136 @@ body {
 }
 .content .explorer .contenu .explorer-btn button:hover {
   cursor: pointer;
+}
+.content .fonctionnement {
+  margin: 0rem 1rem 4rem 1.7rem;
+}
+.content .fonctionnement h3 {
+  margin-left: -0.7rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .content .fonctionnement .options {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.content .fonctionnement .options .cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4.4rem;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .content .fonctionnement .options .cards {
+    width: 30%;
+  }
+}
+.content .fonctionnement .options .cards i {
+  color: #7e7e7e;
+  margin: auto 1rem auto 0.3rem;
+  width: 20px;
+}
+.content .fonctionnement .options .cards span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 100%;
+  background-color: #9356dc;
+  position: relative;
+  left: -0.7rem;
+}
+.content .fonctionnement .options .cards p {
+  font-weight: bold;
+}
+.content .fonctionnement .options .cards:hover {
+  background-color: #f5edff;
+}
+.content .fonctionnement .options .cards:hover i {
+  color: #9356dc;
+}
+.content .restaurants {
+  background-color: #f6f6f6;
+}
+.content .restaurants .contenu {
+  margin: 0rem 1rem 0rem 1rem;
+  padding: 3.75rem 0rem 3.75rem 0rem;
+}
+.content .restaurants .contenu h3 {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .content .restaurants .contenu .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.content .card-container {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .content .card-container {
+    width: 45%;
+  }
+}
+.content .card-container .card {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  text-decoration: none;
+}
+.content .card-container .card .image {
+  width: 100%;
+  aspect-ratio: 2/1;
+}
+.content .card-container .card .nouveau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-start;
+  width: 5rem;
+  height: 1.9rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #008766;
+  background-color: #99e2d0;
+  border-radius: 2px;
+  margin-top: 1rem;
+  margin-left: 12.5rem;
+  position: absolute;
+}
+.content .card-container .card__heart {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
+.content .card-container .card .title {
+  grid-column: 1/span 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.content .card-container .card .title h4 {
+  margin-bottom: 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
