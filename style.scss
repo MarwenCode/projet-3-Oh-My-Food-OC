@@ -566,7 +566,7 @@ body {
 
 
 
-  .illustration {
+  .restaurant-name {
     display: grid;
 
     // grid-template-columns: 1fr 1fr;
@@ -584,7 +584,7 @@ body {
       }
     }
 
-    &__body {
+    .title-section {
       // grid-column: 1 / span 2;
       // grid-row: 2;
       background-color: $background-color;
@@ -626,7 +626,7 @@ body {
 }
 
 /* SECTION 2 */
-.menu {
+.container-menu {
   padding: 20px;
 
   @media (min-width: 768px) {
@@ -645,29 +645,30 @@ body {
     flex-wrap: wrap;
   }
 
-  &__starter {
+  .menu{
     @media (min-width: 768px) {
       width: 45%;
     }
 
   }
 
-  &__main {
-    @media (min-width: 768px) {
-      width: 45%;
-    }
-  }
+  // .menu-main {
+  //   @media (min-width: 768px) {
+  //     width: 45%;
+  //   }
+  // }
 
-  &__dessert {
-    @media (min-width: 768px) {
-      // width: 95%;
-      width: 45%;
-    }
-  }
+  // .menu-dessert {
+  //   @media (min-width: 768px) {
+  //     // width: 95%;
+  //     width: 45%;
+  //   }
+  // }
 }
 
 .menu {
-  &__title {
+  width: 45%;
+  .title {
     margin-top: 2rem;
     margin-bottom: 1rem;
 
@@ -676,7 +677,7 @@ body {
     }
   }
 
-  &__card {
+  .menu-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -688,11 +689,21 @@ body {
     margin: 0rem 1rem 1rem 1rem;
     cursor: pointer;
 
+
+
+     .card-content_animation-check {
+      .fa-check-circle {
+        display: none; /* Hide the check-circle by default */
+        font-size: 1.5rem;
+        color: white;
+      }
+    }
+
     &:hover {
-      .menu__card__body {
+      .card-content{
         width: 80%;
 
-        +.menu__card__body__animation-check {
+        +.card-content_animation-check {
           width: 20%;
           transform: scale(1);
 
@@ -705,10 +716,10 @@ body {
 
     @media (min-width: 768px) {
       &:hover {
-        .menu__card__body {
+        .card-content {
           width: 80%;
 
-          +.menu__card__body__animation-check {
+          +.card-content_animation-check {
             width: 20%;
             transform: scale(1);
 
@@ -720,15 +731,15 @@ body {
       }
     }
 
-    &__body {
+    .card-content{
       width: 100%;
       transition: all 1s;
 
-      &__title {
+      .card-content-title {
         padding-left: 1rem;
       }
 
-      &__description {
+      .card-content-description{
         display: flex;
         justify-content: space-between;
         padding: 0rem 1rem;
@@ -746,22 +757,28 @@ body {
         }
       }
 
-      &__animation-check {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 0%;
-        background-color: #99e2d0;
-        border-radius: 0px 15px 15px 0px;
-        transform: scale(0, 1);
-        transform-origin: right;
-        transition: all 1s;
+    
+    }
 
-        .fa-check-circle {
-          font-size: 1.5rem;
-          color: white;
-        }
+    .card-content_animation-check {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 0%;
+      background-color: #99e2d0;
+      border-radius: 0px 15px 15px 0px;
+      transform: scale(0, 1);
+      transform-origin: right;
+      transition: all 1s;
+
+     
+
+      .fa-check-circle {
+        font-size: 1.5rem;
+        color: white;
+        display: inline;
+      
       }
     }
   }
