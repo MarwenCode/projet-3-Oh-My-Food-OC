@@ -43,6 +43,7 @@ body {
   font-family: "roboto", Arial, sans-serif;
   font-size: 0.9rem;
   margin: auto;
+  background-color: white;
 
 }
 
@@ -521,6 +522,8 @@ body {
 
 /* SECTION 1 */
 
+
+
 .section {
 
   header {
@@ -568,9 +571,10 @@ body {
 
   .restaurant-name {
     display: grid;
+   
 
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-rows: 220px 65px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 65px;
     .image {
       grid-column: 1 / span 2;
       width: 100%;
@@ -596,6 +600,7 @@ body {
       width: 100%;
       // margin-left: 50%;
       transform: translateX(50%);
+     
 
       @media (min-width: 320px) {
        margin: 0;
@@ -627,7 +632,14 @@ body {
 
 /* SECTION 2 */
 .container-menu {
-  padding: 20px;
+  width: 100%;
+  
+  
+ 
+
+  
+  
+
 
   @media (min-width: 768px) {
     width: 100%;
@@ -635,6 +647,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+  
   }
 
 
@@ -647,7 +661,7 @@ body {
 
   .menu{
     @media (min-width: 768px) {
-      width: 45%;
+      width: 50%;
     }
 
   }
@@ -667,13 +681,20 @@ body {
 }
 
 .menu {
-  width: 45%;
+  width: 100%;
+
+  background-color: #f6f6f6;
+  // width: 50%;
+  
+
   .title {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    padding: 20px;
 
     span {
       border-bottom: solid #99e2d0 3px;
+      
     }
   }
 
