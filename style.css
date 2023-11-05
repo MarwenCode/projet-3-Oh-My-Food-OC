@@ -1,3 +1,37 @@
+@keyframes remplissage-coeur {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 50%;
+  }
+}
+@keyframes animation-menu {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loader {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes loader-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 /* GENERAL */
 * {
   margin: 0;
@@ -11,8 +45,11 @@ body {
   font-size: 0.9rem;
   margin: auto;
   background-color: white;
+  overflow-x: hidden;
 }
 
+/* Bouton */
+/* Coeur + Animation */
 .loader {
   position: fixed;
   display: flex;
@@ -23,7 +60,7 @@ body {
   width: 100vw;
   color: white;
   font-size: 2rem;
-  background: #9356DC;
+  background: #9356dc;
   animation: loader 4s ease-in-out both;
 }
 .loader .fa-spinner {
@@ -32,9 +69,10 @@ body {
 
 .content {
   background-color: white;
-  animation: content-animation 2s ease-in-out 2s both;
+  animation: content 2s ease-in-out 2s both;
   width: 100vw;
   /* section 1 */
+  /* SECTION 2 */
   /* SECTION 2 */
   /* SECTION 3 */
   /* SECTION 4 */
@@ -55,21 +93,27 @@ body {
 }
 .content .container-localisation {
   width: 100%;
-  background: #EAEAEA;
-}
-.content .container-localisation .localisation {
-  justify-content: center;
+  background: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.content .container-localisation .localisation {
+  display: flex;
+  align-items: center;
+}
 .content .container-localisation .localisation .fas {
   flex: 0;
-  margin-left: 30%;
 }
 .content .container-localisation .localisation h4 {
   flex: 1;
   padding: 1rem;
+}
+@media (min-width: 768px) {
+  .content .container-localisation {
+    justify-content: center;
+    align-items: center;
+  }
 }
 .content .explorer {
   display: flex;
@@ -92,37 +136,31 @@ body {
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-}
-.content .explorer .contenu .explorer-btn button {
   height: 3rem;
   width: 13.4rem;
   margin: auto;
-  cursor: pointer;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   border-radius: 1.5rem;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
   transition: all 400ms ease-in-out;
-  border: none;
-  color: white;
+  cursor: pointer;
 }
-.content .explorer .contenu .explorer-btn button a {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+.content .explorer .contenu .explorer-btn a {
+  color: white;
   height: 100%;
   width: 100%;
+  text-decoration: none;
 }
-.content .explorer .contenu .explorer-btn button p {
+.content .explorer .contenu .explorer-btn p {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
 }
-.content .explorer .contenu .explorer-btn button:hover {
-  cursor: pointer;
+.content .explorer .contenu .explorer-btn:hover {
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1803921569);
 }
 .content .fonctionnement {
   margin: 0rem 1rem 4rem 1.7rem;
@@ -171,6 +209,11 @@ body {
 }
 .content .fonctionnement .options .cards p {
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .content .fonctionnement .options .cards p {
+    font-size: small;
+  }
 }
 .content .fonctionnement .options .cards:hover {
   background-color: #f5edff;
@@ -264,9 +307,26 @@ body {
   font-size: 1.5rem;
   margin: 1.5rem;
   color: rgb(44, 43, 43);
+  position: relative;
+}
+.content .card-container .card .info .heart img.heart2 {
+  margin-left: 2rem;
+  margin: 1.39rem;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  margin-right: -22px;
+  font-size: 1.5rem;
+  margin-top: 4px;
+  display: none;
+  width: 25px;
 }
 .content .card-container .card .info .heart i {
-  margin-left: 2rem;
+  margin-left: 22.5px;
+}
+.content .card-container .card .info .heart:hover img.heart2 {
+  display: inline;
+  background: transparent; /* Set the background color as needed */
 }
 .content footer {
   background-color: #353535;
@@ -278,7 +338,7 @@ body {
 }
 .content footer h1 {
   padding-top: 1rem;
-  color: #FFF;
+  color: #fff;
   font-family: shrikhand;
   font-size: 1.4rem;
   font-style: normal;
@@ -328,6 +388,16 @@ body {
 }
 
 /* SECTION 1 */
+@media (min-width: 320px) {
+  .section {
+    background-color: #f6f6f6;
+  }
+}
+@media (min-width: 768px) {
+  .section {
+    background-color: white;
+  }
+}
 .section header {
   display: flex;
   justify-content: center;
@@ -336,7 +406,7 @@ body {
   padding: 14px 59px 13px 17px;
   gap: 42px;
   flex-shrink: 0;
-  background: var(--White, #FFF);
+  background: var(--White, #fff);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 20px;
 }
@@ -350,7 +420,17 @@ body {
 }
 @media (min-width: 768px) {
   .section .logo img {
-    transform: translateX(-180%);
+    transform: translateX(-140%);
+  }
+}
+@media (min-width: 1024px) {
+  .section .logo img {
+    transform: translateX(-190%);
+  }
+}
+@media (min-width: 1440px) {
+  .section .logo img {
+    transform: translateX(-330%);
   }
 }
 .section .arrow {
@@ -363,56 +443,93 @@ body {
     margin-right: 70%;
   }
 }
-.section .restaurant-name {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 220px 65px;
+@media (min-width: 1440px) {
+  .section .arrow {
+    margin-right: 85%;
+  }
 }
-.section .restaurant-name .image {
-  grid-column: 1/span 2;
+.section .image img {
   width: 100%;
   height: 260px;
   font-size: 1.25rem;
   object-fit: cover;
+  margin-bottom: -40px;
 }
 @media (min-width: 768px) {
-  .section .restaurant-name .image {
+  .section .image img {
     display: flex;
     justify-content: center;
   }
 }
-.section .restaurant-name .title-section {
+.section .center {
   background-color: #f6f6f6;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* SECTION 2 */
+  /* SECTION 2 */
+}
+@media (min-width: 768px) {
+  .section .center {
+    width: 50%;
+    transform: translate(50%);
+    border-radius: 35px 35px 0px 0px;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+}
+.section .center .title-section {
+  background-color: #f6f6f6;
   display: flex;
   align-items: center;
   border-radius: 35px 35px 0px 0px;
-  padding: 1rem 1rem 0rem 1rem;
-  width: 100%;
-  transform: translateX(50%);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section .center .title-section h2 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
 }
 @media (min-width: 320px) {
-  .section .restaurant-name .title-section {
-    margin: 0;
+  .section .center .title-section h2 {
+    /* Your CSS rules for this media query */
+    border-radius: 35px 35px 0px 0px;
+    padding: 1rem 1rem 0rem 1rem;
   }
 }
 @media (min-width: 768px) {
-  .section .restaurant-name .title-section h2 {
-    padding-left: 2.5%;
+  .section .center .title-section h2 {
+    /* Your CSS rules for this media query */
+    border-radius: 35px 35px 0px 0px;
+    padding: 1rem 1rem 0rem 1rem;
   }
 }
-@media (min-width: 768px) {
-  .section .restaurant-name .title-section i {
-    padding-right: 2.5%;
+@media (min-width: 1024px) {
+  .section .center .title-section h2 {
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
   }
 }
-
-/* SECTION 2 */
-.container-menu {
+@media (min-width: 1440px) {
+  .section .center .title-section h2 {
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+  }
+}
+.section .center .title-section .fa-heart {
+  font-size: larger;
+  margin-top: 35px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.section .center .container-menu {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .container-menu {
+  .section .center .container-menu {
     width: 100%;
     display: felx;
     flex-direction: column;
@@ -421,31 +538,31 @@ body {
   }
 }
 @media (min-width: 768px) {
-  .container-menu {
+  .section .center .container-menu {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
-  .container-menu .menu {
-    width: 50%;
+  .section .center .container-menu .menu {
+    width: 100%;
   }
 }
-
-.menu {
+.section .center .menu {
   width: 100%;
   background-color: #f6f6f6;
 }
-.menu .title {
+.section .center .menu .title {
   margin-top: 2rem;
   margin-bottom: 1rem;
   padding: 20px;
 }
-.menu .title span {
+.section .center .menu .title span {
   border-bottom: solid #99e2d0 3px;
 }
-.menu .menu-card {
+.section .center .menu .menu-card {
+  animation: animation-menu ease-out 3s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -457,56 +574,53 @@ body {
   margin: 0rem 1rem 1rem 1rem;
   cursor: pointer;
 }
-.menu .menu-card .card-content_animation-check .fa-check-circle {
-  display: none; /* Hide the check-circle by default */
+.section .center .menu .menu-card .card-content_animation-check .fa-check-circle {
+  display: none;
   font-size: 1.5rem;
   color: white;
 }
-.menu .menu-card:hover .card-content {
+.section .center .menu .menu-card:hover .card-content {
   width: 80%;
 }
-.menu .menu-card:hover .card-content + .card-content_animation-check {
+.section .center .menu .menu-card:hover .card-content + .card-content_animation-check {
   width: 20%;
   transform: scale(1);
 }
-.menu .menu-card:hover .card-content + .card-content_animation-check .fa-check-circle {
-  animation: check-rotate 800ms linear both;
-}
 @media (min-width: 768px) {
-  .menu .menu-card:hover .card-content {
+  .section .center .menu .menu-card:hover .card-content {
     width: 80%;
   }
-  .menu .menu-card:hover .card-content + .card-content_animation-check {
+  .section .center .menu .menu-card:hover .card-content + .card-content_animation-check {
     width: 20%;
     transform: scale(1);
   }
-  .menu .menu-card:hover .card-content + .card-content_animation-check .fa-check-circle {
+  .section .center .menu .menu-card:hover .card-content + .card-content_animation-check .fa-check-circle {
     animation: check-rotate 800ms linear;
   }
 }
-.menu .menu-card .card-content {
+.section .center .menu .menu-card .card-content {
   width: 100%;
   transition: all 1s;
 }
-.menu .menu-card .card-content .card-content-title {
+.section .center .menu .menu-card .card-content .card-content-title {
   padding-left: 1rem;
 }
-.menu .menu-card .card-content .card-content-description {
+.section .center .menu .menu-card .card-content .card-content-description {
   display: flex;
   justify-content: space-between;
   padding: 0rem 1rem;
 }
-.menu .menu-card .card-content .card-content-description p {
+.section .center .menu .menu-card .card-content .card-content-description p {
   font-size: 0.8rem;
   margin-right: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu .menu-card .card-content .card-content-description span {
+.section .center .menu .menu-card .card-content .card-content-description span {
   font-weight: bold;
 }
-.menu .menu-card .card-content_animation-check {
+.section .center .menu .menu-card .card-content_animation-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -514,20 +628,47 @@ body {
   width: 0%;
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
-  transform: scale(0, 1);
+  transform: scale(1);
   transform-origin: right;
-  transition: all 1s;
+  transition: all ease-in-out 0.5s;
 }
-.menu .menu-card .card-content_animation-check .fa-check-circle {
+.section .center .menu .menu-card .card-content_animation-check .fa-check-circle {
   font-size: 1.5rem;
   color: white;
   display: inline;
 }
 
 /* SECTION 3 */
-.order {
+.container-order {
   margin-top: 2.5rem;
   margin-bottom: 3.5rem;
+}
+.container-order .order-button {
+  height: 3rem;
+  width: 13.4rem;
+  margin: auto;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 1.5rem;
+  box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.05);
+  transition: all 400ms ease-in-out;
+  cursor: pointer;
+}
+.container-order .order-button a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+.container-order .order-button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.container-order .order-button:hover {
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1803921569);
 }
 
 /* Footer  */
@@ -542,7 +683,7 @@ footer {
 }
 footer h1 {
   padding-top: 1rem;
-  color: #FFF;
+  color: #fff;
   font-family: shrikhand;
   font-size: 1.4rem;
   font-style: normal;
