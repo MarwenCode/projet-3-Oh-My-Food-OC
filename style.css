@@ -1,3 +1,63 @@
+footer {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 20px;
+}
+footer h1 {
+  padding-top: 1rem;
+  color: #fff;
+  font-family: "Shrikhand";
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+@media (min-width: 768px) {
+  footer h1 {
+    margin-left: 85%;
+  }
+}
+footer ul {
+  list-style-type: none;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: -3.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer ul {
+    width: 70%;
+  }
+}
+@media (min-width: 1400px) {
+  footer ul {
+    width: 50%;
+    margin-left: 30%;
+  }
+}
+footer ul li {
+  margin-bottom: 1.5rem;
+  margin-top: -1.2rem;
+  width: 100%;
+}
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
 @keyframes remplissage-coeur {
   from {
     opacity: 0%;
@@ -40,10 +100,8 @@
 }
 
 body {
-  max-width: 1500px;
   font-family: "roboto", Arial, sans-serif;
   font-size: 0.9rem;
-  margin: auto;
   background-color: white;
   overflow-x: hidden;
 }
@@ -72,7 +130,6 @@ body {
   animation: content 2s ease-in-out 2s both;
   width: 100vw;
   /* section 1 */
-  /* SECTION 2 */
   /* SECTION 2 */
   /* SECTION 3 */
   /* SECTION 4 */
@@ -230,6 +287,7 @@ body {
 }
 .content .restaurants .contenu h3 {
   margin-bottom: 2rem;
+  margin-left: 1.5rem;
 }
 @media (min-width: 768px) {
   .content .restaurants .contenu .cards {
@@ -292,24 +350,25 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
-.content .card-container .card .info .title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 1rem;
-  color: black;
-}
-.content .card-container .card .info .title h4 {
-  margin-bottom: 0.25rem;
-}
-.content .card-container .card .info .heart {
   font-size: 1.5rem;
   margin: 1.5rem;
   color: rgb(44, 43, 43);
   position: relative;
 }
-.content .card-container .card .info .heart img.heart2 {
+.content .card-container .card .info .title {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: black;
+}
+.content .card-container .card .info .title h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+.content .card-container .card .info .title p {
+  font-size: small;
+}
+.content .card-container .card .info img.heart2 {
   margin-left: 2rem;
   margin: 1.39rem;
   cursor: pointer;
@@ -321,70 +380,12 @@ body {
   display: none;
   width: 25px;
 }
-.content .card-container .card .info .heart i {
+.content .card-container .card .info i {
   margin-left: 22.5px;
 }
-.content .card-container .card .info .heart:hover img.heart2 {
+.content .card-container .card .info:hover img.heart2 {
   display: inline;
-  background: transparent; /* Set the background color as needed */
-}
-.content footer {
-  background-color: #353535;
-  color: white;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.content footer h1 {
-  padding-top: 1rem;
-  color: #fff;
-  font-family: shrikhand;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-}
-@media (min-width: 768px) {
-  .content footer h1 {
-    margin-left: 85%;
-  }
-}
-.content footer ul {
-  list-style-type: none;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .content footer ul {
-    display: flex;
-    gap: 20px;
-    white-space: nowrap;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    margin-top: -3rem;
-  }
-}
-@media (min-width: 1024px) {
-  .content footer ul {
-    width: 70%;
-  }
-}
-@media (min-width: 1400px) {
-  .content footer ul {
-    width: 50%;
-    margin-left: 30%;
-  }
-}
-.content footer ul li {
-  margin-bottom: 1.5rem;
-  margin-top: -1.2rem;
-  width: 100%;
-}
-.content footer ul li a {
-  color: white;
-  text-decoration: none;
+  background: transparent;
 }
 
 /* SECTION 1 */
@@ -450,6 +451,7 @@ body {
 }
 .section .image img {
   width: 100%;
+  object-fit: cover;
   height: 260px;
   font-size: 1.25rem;
   object-fit: cover;
@@ -466,7 +468,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* SECTION 2 */
   /* SECTION 2 */
 }
 @media (min-width: 768px) {
@@ -486,10 +487,11 @@ body {
   text-overflow: ellipsis;
 }
 .section .center .title-section h2 {
-  font-size: 28px;
+  font-size: 25px;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 1200;
   line-height: normal;
+  font-family: "Shrikhand";
 }
 @media (min-width: 320px) {
   .section .center .title-section h2 {
@@ -519,11 +521,32 @@ body {
     margin-left: 30%;
   }
 }
-.section .center .title-section .fa-heart {
-  font-size: larger;
-  margin-top: 35px;
-  height: 40px;
-  flex-shrink: 0;
+.section .center .title-section .heart {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  color: rgb(44, 43, 43);
+  position: relative;
+  margin-top: 40px;
+  margin-left: -10px;
+}
+.section .center .title-section .heart img.heart2 {
+  margin-left: 2rem;
+  margin: 1.39rem;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  margin-right: -22px;
+  font-size: 1.5rem;
+  margin-top: 4px;
+  display: none;
+  width: 25px;
+}
+.section .center .title-section .heart i {
+  margin-left: 22.5px;
+}
+.section .center .title-section .heart:hover img.heart2 {
+  display: inline;
+  background: transparent;
 }
 .section .center .container-menu {
   width: 100%;
@@ -562,7 +585,7 @@ body {
   border-bottom: solid #99e2d0 3px;
 }
 .section .center .menu .menu-card {
-  animation: animation-menu ease-out 3s;
+  animation: animation-menu ease-out 10s;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -573,6 +596,15 @@ body {
   overflow: hidden;
   margin: 0rem 1rem 1rem 1rem;
   cursor: pointer;
+}
+.section .center .menu .menu-card:nth-child(1) {
+  animation: animation-menu ease-out 5s 0s;
+}
+.section .center .menu .menu-card:nth-child(2) {
+  animation: animation-menu ease-out 10s 0s;
+}
+.section .center .menu .menu-card:nth-child(3) {
+  animation: animation-menu ease-out 15s 0s;
 }
 .section .center .menu .menu-card .card-content_animation-check .fa-check-circle {
   display: none;
@@ -672,64 +704,5 @@ body {
 }
 
 /* Footer  */
-footer {
-  background-color: #353535;
-  color: white;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 20px;
-}
-footer h1 {
-  padding-top: 1rem;
-  color: #fff;
-  font-family: shrikhand;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-}
-@media (min-width: 768px) {
-  footer h1 {
-    margin-left: 85%;
-  }
-}
-footer ul {
-  list-style-type: none;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  footer ul {
-    display: flex;
-    gap: 20px;
-    white-space: nowrap;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    margin-top: -3rem;
-  }
-}
-@media (min-width: 1024px) {
-  footer ul {
-    width: 70%;
-  }
-}
-@media (min-width: 1400px) {
-  footer ul {
-    width: 50%;
-    margin-left: 30%;
-  }
-}
-footer ul li {
-  margin-bottom: 1.5rem;
-  margin-top: -1.2rem;
-  width: 100%;
-}
-footer ul li a {
-  color: white;
-  text-decoration: none;
-}
 
 /*# sourceMappingURL=style.css.map */
