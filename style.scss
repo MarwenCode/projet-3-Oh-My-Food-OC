@@ -141,23 +141,20 @@ body {
       }
 
       .explorer-btn {
-        width: 100%;
-        flex-shrink: 0;
-        justify-content: center;
-        align-items: center;
-
-
-
-
         @include button;
-
-
-
-
-
-
-
+      
+        &:hover {
+          background: linear-gradient(
+            to bottom right,
+            lighten($secondary-color, 3%),
+            lighten($primary-color, 3%)
+          );
+          box-shadow: 0px 6px 6px #0000002e;
+        }
       }
+      
+
+
     }
   }
 
@@ -327,9 +324,7 @@ body {
           }
         }
 
-        @include heart 
-        
-        // .heart {
+        @include heart // .heart {
         //   font-size: 1.5rem;
         //   margin: 1.5rem;
         //   color: rgb(44, 43, 43);
@@ -637,6 +632,8 @@ body {
       width: 100%;
 
 
+
+
       background-color: #f6f6f6;
       // width: 50%;
 
@@ -651,7 +648,24 @@ body {
       }
 
       .menu-card {
-        animation: animation-menu ease-out 10s;
+        animation: animation-menu ease-out 3s forwards;
+        /* Use "forwards" to keep the final state */
+
+        &:nth-child(1) {
+          animation-delay: 1s;
+          /* Delay for the first card */
+        }
+
+        &:nth-child(2) {
+          animation-delay: 2s;
+          /* Delay for the second card */
+        }
+
+        &:nth-child(3) {
+          animation-delay: 3s;
+          /* Delay for the third card */
+        }
+
 
         display: flex;
         justify-content: space-between;
@@ -664,17 +678,9 @@ body {
         margin: 0rem 1rem 1rem 1rem;
         cursor: pointer;
 
-        &:nth-child(1) {
-          animation: animation-menu ease-out 5s 0s; // Delay for the first card
-        }
-        &:nth-child(2) {
-          animation: animation-menu ease-out 10s 0s; // Delay for the first card
-        }
-        &:nth-child(3) {
-          animation: animation-menu ease-out 15s 0s; // Delay for the first card
-        }
-      
-        
+
+
+
 
         .card-content_animation-check {
           .fa-check-circle {
@@ -744,6 +750,12 @@ body {
               font-weight: bold;
             }
           }
+
+
+
+
+
+
         }
 
         .card-content_animation-check {

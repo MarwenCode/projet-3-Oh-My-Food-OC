@@ -58,14 +58,6 @@ footer ul li a {
   text-decoration: none;
 }
 
-@keyframes remplissage-coeur {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 50%;
-  }
-}
 @keyframes animation-menu {
   from {
     opacity: 0;
@@ -189,10 +181,6 @@ body {
   margin-bottom: 1rem;
 }
 .content .explorer .contenu .explorer-btn {
-  width: 100%;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
   height: 3rem;
   width: 13.4rem;
   margin: auto;
@@ -214,6 +202,10 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+.content .explorer .contenu .explorer-btn:hover {
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1803921569);
 }
 .content .explorer .contenu .explorer-btn:hover {
   background: linear-gradient(to bottom right, #ff88de, #9b63df);
@@ -585,7 +577,8 @@ body {
   border-bottom: solid #99e2d0 3px;
 }
 .section .center .menu .menu-card {
-  animation: animation-menu ease-out 10s;
+  animation: animation-menu ease-out 3s forwards;
+  /* Use "forwards" to keep the final state */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -598,13 +591,16 @@ body {
   cursor: pointer;
 }
 .section .center .menu .menu-card:nth-child(1) {
-  animation: animation-menu ease-out 5s 0s;
+  animation-delay: 1s;
+  /* Delay for the first card */
 }
 .section .center .menu .menu-card:nth-child(2) {
-  animation: animation-menu ease-out 10s 0s;
+  animation-delay: 2s;
+  /* Delay for the second card */
 }
 .section .center .menu .menu-card:nth-child(3) {
-  animation: animation-menu ease-out 15s 0s;
+  animation-delay: 3s;
+  /* Delay for the third card */
 }
 .section .center .menu .menu-card .card-content_animation-check .fa-check-circle {
   display: none;
