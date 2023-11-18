@@ -1,12 +1,4 @@
-// // Remplissage coeur
-// @keyframes remplissage-coeur {
-//     from {
-//       opacity: 0%;
-//     }
-//     to {
-//       opacity: 50%;
-//     }
-//   }
+
 //   // Apparition des menus
   @keyframes animation-menu {
     from {
@@ -18,21 +10,7 @@
       transform: translateY(0);
     }
   }
-  // Rotation check
-  // @keyframes check-rotate {
-  //   from {
-  //     transform: rotate(0turn);
-  //   }
-  //   to {
-  //     transform: rotate(1turn);
-  //   }
-  // }
-  // Boucle animation menus
-  // @for $i from 1 through 10 {
-  //   .card-#{$i} {
-  //     animation: animation-menu 2s ease-in-out both #{$i * 200}ms;
-  //   }
-  // }
+
   // background + animation loader-spinner
   @keyframes loader {
     from {
@@ -50,20 +28,6 @@
       transform: rotate(1turn);
     }
   }
-
-
-  // Apparition de la page d'acceuil
-
-  // @keyframes content{
-  //   from {
-  //     opacity: 0;
-  //     transform: translateX(-300px);
-  //   }
-  //   to {
-  //     opacity: 1;
-  //     transform: translateX(0);
-  //   }
-  // }
 
 
 

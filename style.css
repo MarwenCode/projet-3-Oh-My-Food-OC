@@ -98,8 +98,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Bouton */
-/* Coeur + Animation */
 .loader {
   position: fixed;
   display: flex;
@@ -487,14 +485,12 @@ body {
 }
 @media (min-width: 320px) {
   .section .center .title-section h2 {
-    /* Your CSS rules for this media query */
     border-radius: 35px 35px 0px 0px;
     padding: 1rem 1rem 0rem 1rem;
   }
 }
 @media (min-width: 768px) {
   .section .center .title-section h2 {
-    /* Your CSS rules for this media query */
     border-radius: 35px 35px 0px 0px;
     padding: 1rem 1rem 0rem 1rem;
   }
@@ -578,7 +574,6 @@ body {
 }
 .section .center .menu .menu-card {
   animation: animation-menu ease-out 3s forwards;
-  /* Use "forwards" to keep the final state */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -592,15 +587,12 @@ body {
 }
 .section .center .menu .menu-card:nth-child(1) {
   animation-delay: 1s;
-  /* Delay for the first card */
 }
 .section .center .menu .menu-card:nth-child(2) {
   animation-delay: 2s;
-  /* Delay for the second card */
 }
 .section .center .menu .menu-card:nth-child(3) {
   animation-delay: 3s;
-  /* Delay for the third card */
 }
 .section .center .menu .menu-card .card-content_animation-check .fa-check-circle {
   display: none;
@@ -698,7 +690,5 @@ body {
   background: linear-gradient(to bottom right, #ff88de, #9b63df);
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1803921569);
 }
-
-/* Footer  */
 
 /*# sourceMappingURL=style.css.map */
